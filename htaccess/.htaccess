@@ -1,0 +1,12 @@
+#Control de acceso ( en directorio htaccess)
+
+AuthType Basic
+AuthName "Restricted Content"
+AuthUserFile /etc/apache2/.htpasswd
+Require valid-user
+
+
+#Crear usuario y contraseña:
+
+
+#sudo htpasswd -c /etc/apache2/.htpasswd username
