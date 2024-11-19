@@ -83,3 +83,28 @@ Durante la instalación, se te pedirá seleccionar el servidor web (Apache) y co
 
 - Archivos Sensibles: 
 Asegúrate de configurar correctamente .env con tus credenciales.
+
+# SEGUNDA PARTE: WORDPRESS
+
+### Instrucciones para ejecutar:
+Asegúrate de tener permisos de ejecución en los scripts:
+```bash
+chmod +x deploy_wordpress_with_wpcli.sh setup_letsencrypt_https.sh
+```
+1. Ejecuta primero el script para desplegar WordPress:
+```bash
+./deploy_wordpress_with_wpcli.sh
+```
+Este script instala WordPress en el directorio raíz /var/www/html.
+
+2. Luego, ejecuta el script para configurar SSL:
+```bash
+./setup_letsencrypt_https.sh
+```
+Este script configura un certificado SSL/TLS con Let’s Encrypt en Apache.
+
+### Importante
+
+Asegúrate de tener un archivo .env con las variables necesarias para los scripts. 
+
+[Enlace a ejemplo de variables](./conf/.env.example)
